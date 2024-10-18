@@ -1,0 +1,58 @@
+For handling validations in React
+
+React Hook Form - Third party library
+
+For installation:
+
+    npm install react-hook-form
+
+
+Component.jsx
+
+import { useForm } from 'react-hook-form';
+
+function ComponentName() {
+    const { register, handleSubmit, formState: { errors }, watch } = useForm();
+
+    const saveUser = () => {
+
+    };
+
+    return (
+
+        <form onSubmit={handleSubmit(saveUser)}>
+            <div>
+                <input type="text" {...register(fieldName, { required: true })}/>
+                <button type="submit">Save</button>
+            </div>
+        
+        </form>
+    )
+}
+
+register - Used to register form field in react-hook-form.
+handleSubmit - Calls our function when form is valid.
+formState - State of the form fields - error/valid case.
+watch - Used to monitor and retrieve value of specific form field.
+
+
+function useForm() {
+
+
+    return {
+        register: () => {
+
+        },
+        handleSubmit: () => {
+
+        },
+        formState: {
+            errors: {
+
+            }
+        },
+        watch: () => {
+
+        }
+    }
+}

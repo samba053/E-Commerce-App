@@ -1,0 +1,53 @@
+React Js - Library - Predefined Functionalities to build web app.
+
+Component - Custom Tag - Navbar/Footer/Card
+Routing - Navigating from one page to another page.
+String Interpolation
+Events
+
+
+    /home - /contact-us
+
+
+    .index.html
+
+        <home/>
+
+        <contact-us/>
+
+JSX - Javascript XML
+
+Javascript - 
+
+JSX - React Complier - Node Js
+
+Node Js - Runtime env - Execute Javascript applications ()
+
+Link to download node.js:
+https://nodejs.org/en
+
+To verify wheather node.js has been installed or not
+
+node -v
+
+    If it is installed, it returns version otherwise command not found.
+
+npm - Node Package Manager - Manages all the packages which available under Javascript.
+
+Vite Js: is a build tool that aims to provide a faster and leaner development experience for modern web projects.
+
+To create project using vite js:
+
+npm create vite@latest
+
+React
+
+Javascript
+
+Once project is downloaded:
+cd project-name
+npm install
+npm run dev
+
+
+Next Js

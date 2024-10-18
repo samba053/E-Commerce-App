@@ -1,0 +1,23 @@
+Passing data in route
+
+1. Route Params
+
+    /routeName/value1/value2
+
+    To retrieve route params from url
+
+    import { useParams } from 'react-router-dom';
+
+    const params = useParams();
+
+        {productId: 1}
+
+2. Query Params
+
+    /routeName?key1=value1&key2=value2&key3=value3
+
+    import { useSearchParams } from 'react-router-dom';
+
+    const [searchParams, setSearchParams] = useSearchParams();
+
+    searchParams.get(keyName);

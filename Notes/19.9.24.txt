@@ -1,0 +1,63 @@
+React 16.x
+
+1. Functional Components
+
+Hooks - Functions
+
+In React, hooks are functions that allow you to use React state and lifecycle features from within function 
+components.
+
+A hook is function that gives you access to React's internal Memory.
+
+1. useState
+2. useEffect
+3. useReducer
+4. useContext
+5. useRef
+6. useMemo
+7. useCallback
+
+1. useState: Manages state in the functional component.
+
+useState is React Hook that allows you to add state to a functional component. 
+
+import { useState } from 'react';
+
+const [state, setState] = useState(initialValue);
+
+    initialValue - Initial value of variable
+
+    state - Returns the current value.
+
+    setState - Update the value
+
+
+const [email, setEmail] = useState('ajay.k@digital-lync.com');
+
+const [counter, setCounter] = useState(0);
+
+const changeEmail = () => {
+    // email = 'venu.h@gmail.com';
+
+    setEmail('venu.h@gmail.com');
+}
+
+const increment = () => {
+    // setCounter(counter + 1);
+
+    setCounter((prevValue) => prevValue + 1);
+};
+
+const decrement = () => {
+    setCounter(prevValue => prevValue - 1);
+}
+
+<h2>Email: {email}</h2>
+
+<h3>Counter: {counter}</h3>
+
+<button className="bg-blue-500 text-white text-sm px-3 py-2 rounded my-2" onClick={changeEmail}>Change Email</button>
+
+<button onClick={increment} className="ms-2 bg-green-500 text-white text-sm px-3 py-2 rounded my-2">Increment</button>
+
+<button onClick={decrement} className="ms-2 bg-green-500 text-white text-sm px-3 py-2 rounded my-2">Decrement</button>

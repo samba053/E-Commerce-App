@@ -1,0 +1,49 @@
+> Destructuring
+> Default Parameters
+> Rest Operators
+> Object Literal Enhancements
+> Modules
+
+Rest Operator: Used to store rest of the values passed to the function.
+
+    function functionName(param1, param2, ...params) {
+
+    }
+
+    functionName(value1, value2, value3, value4);
+
+> Default Parameters: Using this, we can assign default values to the parameters.
+
+    Syntax:
+
+        function functionName(param1, param2 = []) {
+
+        }
+
+        functionName();
+
+> Destructuring - Array & Object
+
+> Extracting values from array/object is called Destructuring of Array/Object.
+
+    Syntax:
+
+        const meetingInfo = {
+            title: "Fashion Designing-2404",
+            meetingId: "812 2414 0682",
+            organizer: "hr@digital-edify.com",
+            recorded: "No",
+            startTime: "05/21/2024 06:03:02 PM",
+            joinTime: "09/04/2024 02:28:23 PM",
+            leaveTime: "09/04/2024 02:28:42 PM",
+            duration: "1",
+            participants: "1",
+            messages: "1",
+            platform: "Zoom"
+        };
+
+Array Destructuring:
+
+    const [variable1, variable2] = [{}, {}];
+
+Object Literal Enhancements

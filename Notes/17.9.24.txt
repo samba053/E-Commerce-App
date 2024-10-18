@@ -1,0 +1,71 @@
+Find: Retrieve matching value from the array.
+
+    Syntax:
+
+        const filteredValue = arrayName.find((value, index) => {
+            return condition;
+        });
+
+React - Single Page Application (SPA)
+
+Routing: Routing in React is the process of navigating between pages in a single-page application (SPA) without reloading the entire page. It's an important feature for SPAs because it allows for a faster and more streamlined user experience. 
+
+> In a single-page React Application, routing refers to the process of navigating between different pages without triggering a full page reload. 
+
+> The application initially loads a single HTML page. Then, it dynamically renders different components based on user interaction.
+
+    Installation:
+
+        npm install react-router-dom
+
+    main.jsx
+
+    Using BrowserRouter - It remember the history of user navigation
+
+    import { BrowserRouter } from 'react-router-dom';
+
+
+        <BrowserRouter>
+            <App/>
+        </BrowserRouter>
+
+    App.jsx
+
+    import { Routes, Route } from 'react-router-dom';
+
+
+        <Routes>
+            <Route path="/routeName" element={<ComponentName/>} />
+        
+            <Route path="/routeName" element={<ComponentName/>} />
+            <Route path="/routeName" element={<ComponentName/>} />
+            <Route path="/routeName" element={<ComponentName/>} />
+        
+        </Routes>
+
+Link: Used to do static navigations
+
+    import { Link } from 'react-router-dom';
+
+    <Link to="/routeName">Nav name</Link>
+
+Nested Routing: 
+
+
+        <Routes>
+            <Route path="/routeName" element={<ComponentName/>} />
+        
+            <Route path="/routeName" element={<ComponentName/>}>
+                <Route path="routeName" element={<ComponentName/>} />
+                <Route path="routeName" element={<ComponentName/>} />
+                <Route path="routeName" element={<ComponentName/>} />
+                <Route path="routeName" element={<ComponentName/>} />
+            </Route>
+            <Route path="/routeName" element={<ComponentName/>} />
+            <Route path="/routeName" element={<ComponentName/>} />
+        </Routes>
+
+
+        import { Outlet } from 'react-router-dom';
+
+        <Outlet/>

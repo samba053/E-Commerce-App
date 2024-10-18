@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const voters = [
+            {
+                id: 1,
+                firstName: "John",
+                lastName: "Doe",
+                age: 28,
+                gender: "Male",
+                registered: true,
+                voted: false
+            },
+            {
+                id: 2,
+                firstName: "Jane",
+                lastName: "Smith",
+                age: 34,
+                gender: "Female",
+                registered: true,
+                voted: true
+            },
+            {
+                id: 3,
+                firstName: "Alice",
+                lastName: "Johnson",
+                age: 22,
+                gender: "Female",
+                registered: false,
+                voted: false
+            },
+            {
+                id: 4,
+                firstName: "Bob",
+                lastName: "Brown",
+                age: 45,
+                gender: "Male",
+                registered: true,
+                voted: true
+            },
+            {
+                id: 5,
+                firstName: "Carol",
+                lastName: "Davis",
+                age: 30,
+                gender: "Female",
+                registered: true,
+                voted: false
+            }
+        ];
+
+        voters.forEach(function(voter, index) {
+            console.log(voter, index);
+        });
+
+        const modifiedVoters = voters.map(function(voter, index) {
+            return voter.id === 4 ? {...voter, voted: false} : voter;
+        });
+
+        console.log(modifiedVoters, voters);
+
+        const filteredVoters = voters.filter(function(voter, index) {
+            return voter.age < 30;
+        });
+
+        console.log(filteredVoters);
+
+
+        const cartProducts = [
+            {
+                name: 'Men Printed Raw Edge T-shirt',
+                brand: 'macmerise',
+                price: 899,
+                quantity: 1
+            },
+            {
+                name: 'Men Printed T-shirt',
+                brand: 'macmerise',
+                price: 899,
+                quantity: 2
+            }
+        ];
+
+        let totalAmount = 0;
+
+        for (let i = 0; i < cartProducts.length; i++) {
+            totalAmount += cartProducts[i].price * cartProducts[i].quantity;
+        }
+
+        console.log(totalAmount);
+
+        // const _totalAmount = cartProducts.reduce(function(acc, product) {
+        //     return acc + product.price * product.quantity;
+        // }, 0);
+
+        const _totalAmount = cartProducts.reduce((acc, product) => (acc + product.price * product.quantity), 0);
+
+        console.log(_totalAmount);
+
+
+        function calSum(value1, value2, ...values) {
+            console.log(value1, value2, values);
+        }
+
+        calSum(9, 6, 4, 7)
+    </script>
+</body>
+
+</html>

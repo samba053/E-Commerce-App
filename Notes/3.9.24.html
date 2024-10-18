@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const customers = [
+            {
+                id: 1,
+                name: 'Jayeesh',
+                accountNo: 901238,
+                pin: 9012,
+                balance: 1000,
+                transactions: []
+            },
+            {
+                id: 2,
+                name: 'Charan',
+                accountNo: 901239,
+                pin: 9013,
+                balance: 460,
+                transactions: []
+            }
+        ];
+
+        class ATM {
+            customer = {};
+            index = -1;
+            constructor(accountNo, pin) {
+                this.accountNo = accountNo;
+                this.pin = pin;
+                this.getCustomer();
+            }
+            getCustomer() {
+                for (let i = 0; i < customers.length; i++) {
+                    if (customers[i].accountNo === this.accountNo && customers[i].pin === this.pin) {
+                        this.customer = customers[i];
+                        this.index = i;
+                    }
+                }
+            }
+
+            getBalance() {
+                return `Current Balance: ${this.customer.balance}`;
+            }
+
+            withdrawal(amount) {
+                if (this.customer.balance >= amount) {
+                    this.customer.balance -= amount;
+                    const transactionObj = {
+                        amount: amount,
+                        type: 'Withdrawal',
+                        balance: this.customer.balance
+                    };
+                    this.customer.transactions.push(transactionObj);
+
+                    customers[this.index] = this.customer;
+                    return `Withdrawed successfully, balance: ${this.customer.balance}`;
+                } else {
+                    return 'Insufficient balance';
+                }
+            }
+
+            miniStatement() {
+                let transactionStr = '';
+
+                for (let i = 0; i < this.customer.transactions.length; i++) {
+                    transactionStr += `${this.customer.transactions[i].type}   ${this.customer.transactions[i].amount}  ${this.customer.transactions[i].balance} \n`;
+                }
+                return transactionStr;
+            }
+
+            // Withdraw
+            // Deposit
+            // Mini Statement
+            // Change Pin
+            // Balance
+        }
+
+        // const customer1 = new ATM(901238, 9012);
+
+        // const balance = customer1.getBalance();
+
+        // let result = customer1.withdrawal(400);
+
+        // console.log(result);
+
+        // result = customer1.withdrawal(200);
+
+        // console.log(result);
+
+        // result = customer1.miniStatement();
+
+        // console.log(result);
+
+        // console.log(balance);
+
+        // const customer2 = new ATM(901239, 9013);
+
+        // const balance2 = customer2.getBalance();
+
+        // console.log(balance2);
+
+        class EnhancedATM extends ATM {
+
+            constructor(accountNo, pin) {
+                // Calls immediate parent class constructor and passes accountNo and pin
+                super(accountNo, pin);
+            }
+
+            deposit(amount) {
+                this.customer.balance += amount;
+                const transactionObj = {
+                    amount: amount,
+                    type: 'Deposit',
+                    balance: this.customer.balance
+                };
+                this.customer.transactions.push(transactionObj);
+
+                customers[this.index] = this.customer;
+                return `Deposited successfully, balance: ${this.customer.balance}`;
+            }
+
+            changePin(pin) {
+                this.pin = pin;
+                this.customer.pin = pin;
+                customers[this.index].pin = pin;
+                return  'Updated the pin successfully';
+            }
+        }
+
+        const customer1 = new EnhancedATM(901239, 9013);
+
+        console.log(customer1.getBalance());
+
+        customer1.withdrawal(100);
+
+        customer1.withdrawal(200);
+
+        customer1.withdrawal(50);
+
+        customer1.deposit(5000);
+
+        result = customer1.miniStatement();
+
+        console.log(result);
+
+        result = customer1.changePin(7890);
+
+        console.log(customer1);
+
+    </script>
+</body>
+</html>

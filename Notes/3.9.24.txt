@@ -1,0 +1,35 @@
+Inheritance: Sharing information from one class to another class.
+
+    Syntax: 
+
+        class ParentClass {
+            constructor() {
+
+            }
+
+            methodName() {
+
+            }
+
+            methodName() {
+                
+            }
+        }
+
+        class ChildClass extends ParentClass {
+            constructor() {
+                
+            }
+
+            methodName() {
+                
+            }
+
+            methodName() {
+                
+            }
+        }
+
+Properties and methods available in parent class can be accessible in child class.
+
+Prototypes: JavaScript is a prototype-based, automatically adds a prototype property to functions upon creation. This prototype object allows attaching methods and properties, facilitating inheritance for all objects created from the function.

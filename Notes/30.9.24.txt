@@ -1,0 +1,43 @@
+Props:
+
+Props Drilling: Prop drilling in React is the process of passing data from a parent component to its child components, through multiple layers of components.
+
+Context API: Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+
+ContextService.js
+
+import { createContext } from 'react';
+
+const contextName = createContext();
+
+export default contextName;
+
+ParentComponent.jsx
+
+import ContextName from './ContextService';
+import ChildComponent from './ChildComponent';
+function ParentComponent() {
+    return (
+
+        // Provider
+        <ContextName.Provider value={{property1: value1, property2: value2, property3: value3}}>
+            <ChildComponent/>
+        </ContextName.Provider>
+    )
+}   
+export default ParentComponent;
+
+ChildComponent.jsx
+import { useContext } from 'react';
+import ContextName from './ContextService';
+function ChildComponent() {
+    // Consumer
+    const { property1, property2, property3 } = useContext(ContextName);
+}
+export default ChildComponent;
+
+
+
+            - Provider
+
+useContext() - Consumer

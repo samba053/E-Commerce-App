@@ -1,0 +1,51 @@
+> Object Literal Enhancements
+> Modules
+
+Object Literal Enhancements:
+
+1. Property of same name: Instead of propertyName: variableName, writing propertyName would be sufficient
+
+    Syntax:
+
+        var variableName = value;
+
+        var objName = {
+            propertyName: variableName,
+
+            propertyName
+
+            methodName() {
+                return value;
+            },
+
+            [expression]
+        }
+
+2. Dynamic Properties names
+3. Methods
+
+Modules:
+
+1.js
+
+function functionName() {
+
+}
+
+export const a = 10;
+
+export const b = {
+    name: 'Lokesh'
+};
+
+export default functionName;
+
+2.js
+
+import functionName, { a, b } from 'relativePath';
+
+functionName();
+
+var cart = [];
+
+localStorage.setItem('cart', JSON.stringify(cart));

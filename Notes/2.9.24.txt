@@ -1,0 +1,41 @@
+ES6 - ECMA Script 2015
+
+Javascript scripting language follows ecmascript.
+
+OOP in JavaScript
+> Objects and Classes
+> Properties and Methods
+> Constructor Functions
+> Getters and Setters
+> Prototypes
+> Inheritance
+
+> Array Methods (map, filter, reduce)
+> Arrow Functions
+> Let and Const
+> Template Literals
+> Destructuring
+> Default Parameters
+> Spread and Rest Operators
+> Object Literal Enhancements
+> Modules
+
+Object: Collection of key values. ( Values might be of any data type)
+Function: Block of statements which will be executed when we call it. (Functionality)
+
+Object and Class:
+
+Class: Collection of constructor, variables & methods.
+> Collection of objects.
+
+Syntax:
+
+    class ClassName {
+        variables
+        constructor Function
+        methods
+    }
+
+Task: 
+
+

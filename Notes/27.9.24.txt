@@ -1,0 +1,26 @@
+Styling Functional Components
+Inline styles with JSX
+
+    <tagName style={{propertyName: value, propertyName: value, propertyName: value}}></tagName>
+
+
+CSS Modules for local styles
+
+fileName.css
+
+#header {
+    color: red;
+    font-size: 20px;
+}
+
+import 'relativePathOfCSS';
+
+useRef: Gets the reference of html element to javascript.
+
+import { useRef } from 'react';
+
+const variableName = useRef(initialValue);
+
+variableName.current
+
+<tagName ref={variableName}></tagName>

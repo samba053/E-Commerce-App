@@ -1,0 +1,36 @@
+To configure tailwindcss in react project
+
+1. Installation
+npm install -D tailwindcss
+npx tailwindcss init
+
+2. Configure template paths
+
+    In root folder, we need to create a new file with tailwind.config.js
+
+    module.exports = {
+        content: [
+            './src/**/*.{html,js,ts,jsx,tsx,vue}', // Adjust this based on your project structure
+        ],
+        theme: {
+            extend: {},
+        },
+        plugins: [],
+    };
+
+    In root folder, we need to create a new file with postcss.config.mjs
+
+    /** @type {import('postcss-load-config').Config} */
+    const config = {
+        plugins: {
+            tailwindcss: {},
+        },
+    };
+
+    export default config;
+
+    > In index.css
+
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;

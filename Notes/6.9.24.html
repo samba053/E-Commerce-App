@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const phoneNumber = "+1234567890";
+
+        const callStatus = 'disconnected';
+
+        const caller = {
+            id: 1,
+            name: "John Doe",
+            phoneNumber,
+            [`callStatus_${callStatus}`]: "connected", // possible values: 'connected', 'disconnected', 'on hold', etc.
+            callStartTime: new Date(),
+            callEndTime: null,
+            duration:function () {
+                if (this.callEndTime) {
+                    return (this.callEndTime - this.callStartTime) / 1000; // duration in seconds
+                }
+                return null;
+            },
+            updateStatus(newStatus) {
+                this.callStatus = newStatus;
+            },
+            endCall: function () {
+                this.callEndTime = new Date();
+            }
+        };
+
+        console.log(caller.updateStatus('On Hold'));
+
+        console.log(caller);
+
+        setTimeout(() => {
+            caller.endCall();
+
+            console.log(caller.duration());
+        }, 500);
+
+        const { name } = caller;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function calculateSum(num1, ...extraNums) {
+            if (extraNums.length > 0) {
+                const sum = extraNums.reduce((acc, num) => acc + num, 0);
+                return num1 + sum;
+            } else {
+                return num1;
+            }
+        }
+
+        let result = calculateSum(45, 90, 78, 56);
+
+        console.log(result);
+
+
+        function displayEmployees(employees = []) {
+            employees.forEach(employee => {
+
+            });
+        }
+
+        displayEmployees();
+
+
+        const meetingDetails = {
+            title: "Fashion Designing-2404",
+            platform: "Zoom",
+            organizer: "hr@digital-edify.com",
+            recordingDetails: {
+                recorded: "No",
+                duration: "1",
+                timeDetails: {
+                    startTime: "05/21/2024 06:03:02 PM",
+                    joinTime: "09/04/2024 02:28:23 PM",
+                    leaveTime: "09/04/2024 02:28:42 PM"
+                }
+            },
+            activityDetails: {
+                participants: {
+                    count: "1",
+                    messages: {
+                        count: "1"
+                    }
+                }
+            },
+            meetingId: "812 2414 0682"
+        };
+
+        // const title = meetingInfo.title;
+        // const platform = meetingInfo.platform;
+
+        const { title, platform, recordingDetails: { duration, timeDetails: { startTime } } } = meetingDetails;
+
+        console.log(title, platform, duration, startTime);
+
+        const meetingData = [
+            {
+                title: "Fashion Designing-2404",
+                platform: "Zoom",
+                organizer: "hr@digital-edify.com",
+                recordingDetails: {
+                    recorded: "No",
+                    duration: "1",
+                    timeDetails: {
+                        startTime: "05/21/2024 06:03:02 PM",
+                        joinTime: "09/04/2024 02:28:23 PM",
+                        leaveTime: "09/04/2024 02:28:42 PM"
+                    }
+                },
+                activityDetails: {
+                    participants: {
+                        count: "1",
+                        messages: {
+                            count: "1"
+                        }
+                    }
+                },
+                meetingId: "812 2414 0682"
+            },
+            {
+                title: "DevOps-2420 6:30 PM",
+                platform: "Zoom",
+                organizer: "hr@digital-edify.com",
+                recordingDetails: {
+                    recorded: "No",
+                    duration: "80",
+                    timeDetails: {
+                        startTime: "06/05/2024 02:05:21 PM",
+                        joinTime: "09/04/2024 06:30:18 PM",
+                        leaveTime: "09/04/2024 07:49:54 PM"
+                    }
+                },
+                activityDetails: {
+                    participants: {
+                        count: "299",
+                        messages: {
+                            count: "6"
+                        }
+                    }
+                },
+                meetingId: "882 7947 3656"
+            }
+        ];
+
+        const [meeting1, meeting2] = meetingData;
+
+        const { recordingDetails } = meeting2;
+
+        console.log(meeting2);
+
+    </script>
+
+
+</body>
+
+</html>

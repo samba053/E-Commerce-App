@@ -1,0 +1,93 @@
+> Array Methods (map, filter, reduce)
+> Arrow Functions
+> Let and Const
+> Template Literals
+> Destructuring
+> Default Parameters
+> Spread and Rest Operators
+> Object Literal Enhancements
+> Modules
+
+Array helper functions:
+> forEach
+> map
+> filter
+> reduce
+
+    for (initialization; condition; increment/decrement) {
+
+        // Statements...
+    }
+
+    > forEach: Iterates the statements present in it, until the value present in it.
+
+        Syntax:
+
+            arrayName.forEach(callbackFunc);
+
+            arrayName.forEach(function(value, index) {
+                // Statements...
+            });
+
+    > map: Using this we can modify data present in array, after modification it generates new array.
+
+        Syntax:
+
+            arrayName.map(function(value, index) {
+                // Statements...
+            });
+
+    > filter: Based on condition, if condition is true value will be added filtered array otherwise it will be ignored.
+
+        Syntax:
+
+            arrayName.filter(function(value, index) {
+                // Statements...
+            });
+
+    > reduce:
+
+        Syntax:
+
+            arrayName.reduce(function(acculumator, value) {
+                return statement;
+            }, initialValue)
+
+Spread Operator:
+
+    var obj = {
+        name: 'Bhargav',
+        salary: 90000
+    };
+
+    var genObj = {city: 'hyderabad', ...obj, location: 'hyderabad'};
+
+
+    genObj.age = 30;
+
+Arrow Functions:
+
+    function - =>  (Anonymous & Callback Function)
+
+    {
+        return value - value;
+    }
+
+Rest Operators: Stores rest of values passed in function call as an array.
+
+    Syntax:
+
+        function functionName(arg1, arg2, ...argumentName) {
+
+        }
+
+        functionName(value1, value2, value3);
+
+        functionName(value1, value2, value3, value4);
+
+        functionName(value1, value2, value3, value4, value5);
+
+
+
+
+    splice(index, deleteCount, value1, value2, .., valueN);

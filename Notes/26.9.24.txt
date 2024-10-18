@@ -1,0 +1,28 @@
+Props (Properties): Communicating between components and sharing information.
+
+function ParentComponent() {
+
+    return (
+        <ChildComponent attr1=value1 attr2=value2 attr3=value3/>
+    )
+
+}
+
+Attributes from parent component will come as key value pairs inside props object.
+
+function ChildComponent(props) {
+
+    const { attr1, attr2, attr3 } = props;
+
+
+    return (
+        <GrandChild attr1=value1 attr2=value2/>
+    )
+
+}
+
+props - Predefined Object - We can pass any information in the form of key and value pairs.
+
+function GrandChild(props) {
+    const { attr1, attr2 } = props;
+}

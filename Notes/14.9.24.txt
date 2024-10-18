@@ -1,0 +1,62 @@
+String Interpolation/Expression/Data Binding
+
+> Communicating from javascript to html.
+
+Syntax in JS:
+    const username = 'admin890';
+
+    document.getElementById('username').innerHTML = username;
+
+    <p id="username"></p>
+
+Syntax in React:
+
+    const username = 'admin890';
+    const email = 'admin@gmail.com';
+
+    <p>{username + email}</p>
+
+Event Binding:
+
+> Communicating from html to javascript.
+
+Syntax in Js:
+
+    <button onclick="addToCart()">Add to Cart</button>
+
+    <button onclick="addToCart(1)">Add to Cart</button>
+
+
+Syntax in React:
+
+    <button onClick={addToCart}>Add to Cart</button>
+
+
+    <button onClick={() => addToCart(1)}>Add to Cart</button>
+
+Map Method
+
+> Map method iterates the html elements for no of elements present in the array.
+
+    Syntax:
+
+        {arrayName.map((value, index) => (
+
+        ))}
+
+> In return keyword of functional component:
+
+    To write html code:
+
+        (
+            <div></div>
+        )
+
+    To write js code:
+
+        {expression}
+
+Task:
+
+Build restaurants array of objects and display in the UI under one component.
+https://www.swiggy.com/restaurants

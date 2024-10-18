@@ -1,0 +1,66 @@
+Vite Js Project Structure
+
+node_modules: Consists of all the packages required for the app.
+
+package.json - Consist of package names and versions
+
+package-lock.json - Consist of package names and versions of packages used by our project.
+
+public - assets like images/audio/videos 
+
+src - source code of application
+
+    assets like images/audio/videos 
+
+    main.jsx - Root javascript file
+
+    index.css - CSS file for main.jsx
+
+    App.jsx - Component
+
+    App.css - CSS file for app.jsx
+
+.gitignore - Files which are not required in storing in cloud are added under it.
+
+eslint - ECMAScript Linter. - 
+
+index.html - Root html file of app.
+
+README.md - Text file to include project setup steps and about the project.
+
+vite.config.js - Vite Js Configuration
+
+Component: Collection of HTML, Javascript & CSS - Page.
+
+> Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML. 
+
+> In HTML way, we can call component as custom tag.
+
+    <h1></h1>
+
+> To create a new component
+
+ComponentName.jsx
+
+function ComponentName() {
+    variables
+    functions
+
+    return (
+        <div>
+        
+        </div>
+    )
+
+}
+
+export default ComponentName;
+
+import ComponentName from 'relativePath';
+
+<ComponentName/>
+
+
+const variableName = function() {
+
+};
